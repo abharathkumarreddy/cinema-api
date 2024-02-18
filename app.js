@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const request = require('request');
 
-
+const PORT = process.env.PORT || 4700;
 
 const app = express();
 app.use(cors());
@@ -13,6 +13,6 @@ app.get('', (req, res) => {
     });
 });
 
-app.listen(4700, ()=> {
+app.listen(PORT, ()=> {
     console.log('Server is up');
 });
